@@ -1,5 +1,7 @@
 package calculadoraProyecto;
 
+
+
 import java.util.Scanner;
 
 public class Calculadora {
@@ -18,9 +20,19 @@ public class Calculadora {
  public static void main(String[] args) {
 	 Scanner leer = new Scanner(System.in);
 	 Calculadora calculadora = new Calculadora();
-	 
+	 double num1=0, num2 = 0;
 	 while(true) {
-		 System.out.println("Ingrese operación(+, - , *, /) o 'a' para salir; ");
+		 System.out.println("__CALCULADORA__");
+		 System.out.println("INGRESE LA OPERACION QUE SE QUIERE REALIZAR:\n"
+				 +"___|+|Suma___\n"
+				 +"___|-|Resta___\n"
+				 +"___|*|Multiplicacion___\n"
+				 +"___|/|Division___\n"
+				 + "___|%|Porcentaje___\n"
+				 + "___|r|Raiz___\n"
+				 );
+		 
+		 System.out.println("Ingrese operación o 'a' para salir; ");
 		 String operacion = leer.nextLine();
 		 
 		 if(operacion.equals("a")) {
@@ -28,22 +40,14 @@ public class Calculadora {
 			 break;
 		 }
 		 
-		 double num1;
+		 
 		 System.out.println("(Si existe el ans)Desea utilizar el ans? s/n: ");
 		 String utians= leer.nextLine();
 		 if(utians.equals("s")) {
 			 num1 = calculadora.getAns();
 		 }else {
-			 System.out.println("Ingrese el primer número:");
-	         num1 = leer.nextDouble();
-	         leer.nextLine(); 
-		 }
-         
-         System.out.println("Ingrese el segundo número:");
-         double num2 = leer.nextDouble();
-         leer.nextLine();
-        
-         
+			 
+		 
          switch (operacion) {
          case "+":
              System.out.println("Resultado: " + calculadora.calcular(new Suma(num1, num2), num1, num2));
@@ -57,11 +61,19 @@ public class Calculadora {
          case "/":
              System.out.println("Resultado: " + calculadora.calcular(new Division(num1, num2), num1, num2));
              break;
+         case "%":
+             System.out.println("Resultado: " + calculadora.calcular(new Porcentaje(num1, num2), num1, num2)+ " %");
+             break;
+         case "r":;
+             System.out.println("Resultado: " + calculadora.calcular(new Raiz(num1, num2), num1, num2));
+             break;
          default:
              System.out.println("Operación no válida");
              break;
      }
+		 }
          System.out.println("ANS: " + calculadora.getAns());
      }
 	 }
  }
+
