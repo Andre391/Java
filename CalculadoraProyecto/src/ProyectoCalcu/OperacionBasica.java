@@ -68,6 +68,36 @@ public class OperacionBasica extends Calculadora implements IOperacion{
 		return Math.tan(Math.toRadians(anguloEnGrados));
 	}
 	
+	@Override
+	public double cotangente(double anguloEnGrados) {
+		double anguloEnRadianes = Math.toRadians(anguloEnGrados);
+
+        double cotangente = Math.cos(anguloEnRadianes) / Math.sin(anguloEnRadianes);
+		return cotangente;
+	}
+	
+	@Override
+	public double secante(double anguloEnGrados) {
+		double anguloEnRadianes = Math.toRadians(anguloEnGrados);
+
+        double secante = 1.0 / Math.cos(anguloEnRadianes);
+
+        return secante;
+	}
+
+	@Override
+	public double cosecante(double anguloEnGrados) {
+		double anguloEnRadianes = Math.toRadians(anguloEnGrados);
+        double cosecante = 1.0 / Math.sin(anguloEnRadianes);
+
+        return cosecante;
+	}
+	
+	@Override
+	public double radianes(double anguloEnGrados) {
+		
+		return Math.toRadians(anguloEnGrados);
+	}
 
 	@Override
 	public void menu() {
@@ -117,6 +147,15 @@ public class OperacionBasica extends Calculadora implements IOperacion{
 	                break;
 	            case 10:
 	                realizarOperacion("tangente");
+	                break;
+	            case 11:
+	                realizarOperacion("Cotangente");
+	                break;
+	            case 12:
+	                realizarOperacion("Secante");
+	                break;
+	            case 13:
+	                realizarOperacion("Cosecante");
 	                break;
 	            case 0:
 	                System.out.println("Saliendo de la calculadora.");
@@ -179,6 +218,9 @@ public class OperacionBasica extends Calculadora implements IOperacion{
             case "tangente":
                 result = tangente(num1);
                 break;
+            case "Cotangente":
+                result = tangente(num1);
+                break;
             default:
                 System.out.println("Operación no válida.");
         }
@@ -189,6 +231,9 @@ public class OperacionBasica extends Calculadora implements IOperacion{
 	public double resultado() {
 		return result;
 	}
+
+
+
 
 	
 	

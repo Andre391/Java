@@ -11,6 +11,10 @@ public interface IOperacion{
     double seno(double anguloEnGrados);
     double coseno(double anguloEnGrados);
     double tangente(double anguloEnGrados);
+    double cotangente(double anguloEnGrados);
+    double secante(double anguloEnGrados);
+    double cosecante(double anguloEnGrados);
+    double radianes(double anguloEnGrados);
     
     
 }
