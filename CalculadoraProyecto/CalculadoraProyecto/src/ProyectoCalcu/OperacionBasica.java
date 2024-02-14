@@ -112,7 +112,10 @@ public class OperacionBasica extends Calculadora implements IOperacion{
             		+"|7| Raíz Cuadrada\n"
             		+"|8| Seno\n"
             		+"|9| Coseno\n"
-            		+"|10| Tangente");
+            		+"|10| Tangente\n"
+            		+"|11|Cotangente\n"
+            		+ "|12|Secante\n"
+            		+ "|13|Cosecante");
             System.out.println("|0| Salir");
 	        System.out.print("Seleccione una operación: ");
 	        int opcion = scanner.nextInt();
@@ -219,7 +222,13 @@ public class OperacionBasica extends Calculadora implements IOperacion{
                 result = tangente(num1);
                 break;
             case "Cotangente":
-                result = tangente(num1);
+                result = cotangente(num1);
+                break;
+            case "Secante":
+                result = secante(num1);
+                break;
+            case "Cosecante":
+                result = cosecante(num1);
                 break;
             default:
                 System.out.println("Operación no válida.");
