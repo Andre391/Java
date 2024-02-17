@@ -16,5 +16,4 @@ public interface IOperacion{
     double cosecante(double anguloEnGrados);
     double radianes(double anguloEnGrados);
     
-    
 }
