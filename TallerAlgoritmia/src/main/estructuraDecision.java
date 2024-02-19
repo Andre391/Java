@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
-public class estructuraDecision {
+public class EstructuraDecision {
 	public static void main(String[]args) {
 		Scanner leer = new Scanner(System.in);
         int opcion;

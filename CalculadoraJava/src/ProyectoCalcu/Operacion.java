@@ -170,29 +170,40 @@ public class Operacion extends Calculadora implements IOperacion{
 	    }
 
 
-	    System.out.println("Ingrese el segundo número:");
-	    num2 = leer.nextDouble();
+
 
 	    switch (opcion) {
 	        case 1:
+	    	    System.out.println("Ingrese el segundo número:");
+	    	    num2 = leer.nextDouble();
 	            ans = sumar(num1, num2);
 	            break;
 	        case 2:
+	    	    System.out.println("Ingrese el segundo número:");
+	    	    num2 = leer.nextDouble();
 	            ans = restar(num1, num2);
 	            break;
 	        case 3:
+	    	    System.out.println("Ingrese el segundo número:");
+	    	    num2 = leer.nextDouble();
 	            ans = multiplicar(num1, num2);
 	            break;
 	        case 4:
+	    	    System.out.println("Ingrese el segundo número:");
+	    	    num2 = leer.nextDouble();
 	            ans = dividir(num1, num2);
 	            break;
 	        case 5:
+	    	    System.out.println("Ingrese el segundo número:");
+	    	    num2 = leer.nextDouble();
 	            ans = porcentaje(num1, num2);
 	            break;
 	        case 6:
 	            ans = raizCuadrada(num1);
 	            break;
 	        case 7:
+	    	    System.out.println("Ingrese el número elevador:");
+	    	    num2 = leer.nextDouble();
 	            ans = elevar(num1, num2);
 	            break;
 	        case 8:
